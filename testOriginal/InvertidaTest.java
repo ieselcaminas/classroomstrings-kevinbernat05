@@ -1,6 +1,6 @@
-import org.junit.jupiter.api.Test;
+package test;
 
-import java.util.Arrays;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,6 +11,6 @@ class InvertidaTest {
         String frase = "Esto es una frase";
         String[] palabras = Utilidades.dividirEnPalabras(frase);
         //Fíjate que acaba en un blanco
-        assertEquals("frase una es Esto ", Invertida.invertir(palabras));
+        assertEquals("frase una es Esto ", Invertida.invertir(frase));
     }
 }

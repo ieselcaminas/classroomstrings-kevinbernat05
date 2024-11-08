@@ -6,6 +6,6 @@ class PasatiemposTest {
 
     @Test
     void crearPasatiempo() {
-        assertEquals(".n .j.mpl. d. p.s.t..mp.s", Pasatiempos.crearPasatiempo("un ejemplo de pasatiempos"));
+        assertEquals(".n .j.mpl. d. p.s.t..mp.s", Pasatiempos.sustituirVocales("un ejemplo de pasatiempos"));
     }
 }
