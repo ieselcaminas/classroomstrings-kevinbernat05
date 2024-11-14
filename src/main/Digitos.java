@@ -1,5 +1,3 @@
-package main;
-
 public class Digitos {
     public static int digitos(String frase) {
         int contador = 0;
