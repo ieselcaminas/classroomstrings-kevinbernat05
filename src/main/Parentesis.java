@@ -17,6 +17,6 @@ public class Parentesis {
         return balance == 0;
     }
     public static void main(String[] args) {
-        System.out.println(esParentizada("Esto (es (un ejemplo) (de) una (cadena bien) parentizada)"));
+        System.out.println(esParentizada("Esto )(es (un ejemplo) (de) una (cadena bien) parentizada)("));
     }
 }
