@@ -1,35 +1,22 @@
 public class Parentesis {
     public static boolean esParentizada(String cadena) {
-        boolean bien = false;
+        int balance = 0;
 
         for (int i = 0; i < cadena.length(); i++) {
-            if (cadena.charAt(i) == '(') {
-                bien = false;
 
-                for (int j = i + 1; j < cadena.length(); j++) {
-                    if (cadena.charAt(j) == ')') {
-                        bien = true;
-                        i = j;
-                        break;
-                    } else if (cadena.charAt(j) == '(') {
-                        bien = false;
-                        break;
-                    }
+            if (cadena.charAt(i) == '(') {
+                balance++;
+            } else if (cadena.charAt(i)== ')') {
+                balance--;
+
+                if (balance < 0) {
+                    return false;
                 }
-                if (!bien) {
-                    break;
-                }
-            } else if (cadena.charAt(i) == ')') {
-                bien = false;
-                break;
             }
         }
-        return bien;
+        return balance == 0;
     }
-
     public static void main(String[] args) {
-        String cadena = "una )cadena (mal (parentizada)";
-
-        System.out.println(esParentizada(cadena));
+        System.out.println(esParentizada("Esto (es (un ejemplo) (de) una (cadena bien) parentizada)"));
     }
 }
