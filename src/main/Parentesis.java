@@ -1,7 +1,6 @@
 public class Parentesis {
     public static boolean esParentizada(String cadena) {
         int balance = 0;
-        boolean parentizada = false;
 
         for (int i = 0; i < cadena.length(); i++) {
 
@@ -9,14 +8,13 @@ public class Parentesis {
                 balance++;
             } else if (cadena.charAt(i)== ')') {
                 balance--;
+
+                if (balance < 0) {
+                    return false;
+                }
             }
         }
-        if (balance == 0) {
-            parentizada = true;
-        } else {
-            parentizada = false;
-        }
-        return parentizada;
+        return balance == 0;
     }
     public static void main(String[] args) {
         System.out.println(esParentizada("Esto (es (un ejemplo) (de) una (cadena bien) parentizada)"));
