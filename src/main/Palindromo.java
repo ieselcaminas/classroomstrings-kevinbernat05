@@ -12,6 +12,6 @@ public class Palindromo {
     }
 
     public static void main(String[] args) {
-        System.out.println(esPalindromo("abcba"));
+        System.out.println(esPalindromo("abccba"));
     }
 }
