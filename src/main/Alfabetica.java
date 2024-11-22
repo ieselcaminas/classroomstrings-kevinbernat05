@@ -16,7 +16,7 @@ public class Alfabetica {
 
     public static void main(String[] args) {
 
-        String palabra = "abbbbbccde";
+        String palabra = "abbbbbcce";
 
         if (esAlfabetica(palabra)) {
             System.out.println("La palabra es alfabética");
